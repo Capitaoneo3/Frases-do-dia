@@ -17,20 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void gerarNovaFrase(View view){
-        Button bnt_NovaFrase = findViewById(R.id.bnt_novaFrase_id);
+    Button bnt_novaFrase =(Button) findViewById(R.id.bnt_novaFrase_id);
+    bnt_novaFrase .setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            //faça algo
+        }
+    public void gerarNovaFrase(View view) {
 
-        TextView texto=findViewById(R.id.conteudo_frase);
-
-
-         String[] frases = {
-                "Frase 1",
-                "Frase 2",
-                "Frase 3",
-                "Frase 4",
-        };
-         texto.setText( frases[0]);
-        Random r = new Random();
-         int i = r.nextInt(3);
+        TextView texto = findViewById(R.id.conteudo_frase);
+        texto.setText("joao");
     }
 }
