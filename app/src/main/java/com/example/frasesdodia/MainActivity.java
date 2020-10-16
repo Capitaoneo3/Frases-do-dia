@@ -15,17 +15,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button bnt_novaFrase =(Button) findViewById(R.id.bnt_novaFrase_id);
+
+        bnt_novaFrase.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                gerarNovaFrase();
+            }
+        }
     }
 
-    Button bnt_novaFrase =(Button) findViewById(R.id.bnt_novaFrase_id);
-    bnt_novaFrase .setOnClickListener(new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            //faça algo
-        }
     public void gerarNovaFrase(View view) {
 
         TextView texto = findViewById(R.id.conteudo_frase);
         texto.setText("joao");
     }
+
+
 }
