@@ -20,15 +20,22 @@ public class MainActivity extends AppCompatActivity {
 
         bnt_novaFrase.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                gerarNovaFrase();
+                gerarNovaFrase(this);
             }
-        }
+        });
     }
 
-    public void gerarNovaFrase(View view) {
+    public void gerarNovaFrase(View.OnClickListener view) {
+        String[] frases = {
+            "frase 1",
+            "frase 2",
+            "frase 3",
+            "frase 4"
+        };
+        int numero = new Random().nextInt(4);//0 1 2 3
 
         TextView texto = findViewById(R.id.conteudo_frase);
-        texto.setText("joao");
+        texto.setText(frases[numero]);
     }
 
 
